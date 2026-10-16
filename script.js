@@ -648,8 +648,7 @@ function generateOptimizedPassword() {
         .slice(ch16CandidateStart, ch16CandidateEnd)
         .filter(ch => hasFlag(ch.category, categories[14]))
         .map(ch => ch.char);
-      if (ch16Candidates.length > 2 && !ch16Candidates.includes(password[16])
-      ) {
+      if (ch16Candidates.length > 2 && !ch16Candidates.includes(password[16])) {
         continue;
       }
 
