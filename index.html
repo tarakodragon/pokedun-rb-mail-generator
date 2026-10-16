@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>たらこのメール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>たらこのメール ver1.0.0</h1>
+    <p>ポケダン赤青の捏造メール作成ツールです。</p>
+  </header>
+
+  <main class="main">
+    <section class="tool" aria-label="捏造メール作成ツール">
+      <div class="input-container">
+        <div class="select-container">
+          <label for="request-select">要求アイテム</label>
+          <select id="request-select" name="request-select"></select>
+        </div>
+
+        <div class="select-container">
+          <label for="reward-select">報酬アイテム</label>
+          <select id="reward-select" name="reward-select"></select>
+        </div>
+
+        <button id="generate">作成</button>
+      </div>
+
+      <div class="output-container">
+        <table id="result-table">
+          <thead>
+            <tr>
+              <th>パスワード</th>
+            </tr>
+          </thead>
+          <tbody id="result-tbody">
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="log-container">
+          <label for="log">ログ</label>
+          <textarea id="log" readonly aria-live="polite"></textarea>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="how-to-use">
+    <h2>使い方</h2>
+    <ol>
+      <li>要求アイテム、報酬アイテムを指定して作成ボタンを押してパスワードを作成する。</li>
+      <li>ポケダンでパスワードを入力する。</li>
+      <li>道具箱に要求アイテムを7個入れて（14個入れると2回に1回の補充で済む）依頼を受けて幸せの塔に行き1階でフシギダネを救助し脱出する。</li>
+      <li>救助の依頼1個とアイテムを持ち帰る依頼7個を達成してセーブする。</li>
+      <li>繰り返し。</li>
+    </ol>
+    <p>パスワードの表はクリックで選択することでどれを入力しているかわかりやすくできます。</p>
+    <p>作成ボタンはエンターキーで押せて、パスワードの表は上下矢印キーで選択状態を移動できるので、繰り返す場合マウス要らずで操作できます。</p>
+    <p>詳しくはこのブログ記事を読んでください。</p>
+    <a href="https://tarakodragon.hatenablog.com/entry/2024/08/03/190000" class="ogp-card" target="_blank"
+      rel="noopener noreferrer">
+      <img src="images/blog_pokedun.png" alt="">
+      <div>
+        <h3 class="no-style">【ポケダン赤青】捏造メールを使ったステータスカンスト遊び</h3>
+        <p>※この記事にはポケモンダンジョンの正規の遊び方ではない内容が含まれています。読むかどうかは自己責任でお願いします。 </p>
+        <small>tarakodragon.hatenablog.com</small>
+      </div>
+    </a>
+  </section>
+
+  <section class="disclaimer">
+    <h2>免責事項</h2>
+    <h3>非公式サイトについて</h3>
+    <p>当ページは個人が制作した非公式のファンサイトです。株式会社ポケモンおよび関連企業とは一切関係ありません。</p>
+    <h3>ツールの利用について</h3>
+    <p>
+      当ページのツールは個人が制作したものであり、計算結果の正確性を保証するものではありません。計算式やデータ等に誤りが含まれている場合があります。ツールの利用および利用結果の判断は、すべて利用者ご自身の責任で行ってください。当ページのツールを利用したこと、または利用できなかったことによって生じたいかなる損害についても、制作者は責任を負いかねます。
+    </p>
+    <h3>内容の変更・公開停止について</h3>
+    <p>当ページは予告なく掲載内容の変更または公開の停止を行う場合があります。あらかじめご了承ください。</p>
+  </section>
+
+  <section class="reference">
+    <h2>参考</h2>
+    <h3>Wiki</h3>
+    <p>パスワードの生成規則が詳しく載っています。</p>
+    <a href="https://wikiwiki.jp/pokedun/%E3%83%A1%E3%83%BC%E3%83%AB%E3%83%91%E3%82%B9%E8%A7%A3%E6%9E%90"
+      target="_blank" rel="noopener noreferrer">メールパス解析 -
+      ポケモン不思議のダンジョン 青の救助隊/赤の救助隊 Wiki*
+    </a>
+    <h3>ChatGPT</h3>
+    <p>プログラミングでわからないことを調べました。</p>
+    <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT - チャットGPT</a>
+  </section>
+
+  <section class="my-link">
+    <h2>作者リンク</h2>
+    <h3>ブログ</h3>
+    <a href="https://tarakodragon.hatenablog.com/" class="ogp-card" target="_blank" rel="noopener noreferrer">
+      <img src="images/blog.png" alt="">
+      <div>
+        <h4 class="no-style">たらこの「こう来たらこう！」</h4>
+        <p>昔のポケモン対戦考察を主にやっていきます。</p>
+        <small>tarakodragon.hatenablog.com</small>
+      </div>
+    </a>
+    <h3>X</h3>
+    <a href="https://x.com/tarakodragon" class="ogp-card" target="_blank" rel="noopener noreferrer">
+      <img src="images/x.png" alt="">
+      <div>
+        <h4 class="no-style">たらこドラゴン(弱) @tarakodragon</h4>
+        <p>X初心者で使い方わかってません、反応遅いです、優しくしてね<br>ゲーム（ポケモン4thGSや周辺世代、マイクラ、ポケポケ、ハートピアなど）、アニメ</p>
+        <small>x.com/tarakodragon</small>
+      </div>
+    </a>
+  </section>
+
+  <section class="changelog">
+    <h2>更新履歴</h2>
+    <p>2026/10/17 ver1.0.0 公開</p>
+  </section>
+
+  <div class="theme">
+    <label class="theme-label">
+      <span>ダークモード</span>
+      <input type="checkbox" id="theme-toggle">
+      <span class="toggle-switch"></span>
+    </label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
