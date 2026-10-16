@@ -415,6 +415,11 @@ generate.addEventListener("click", async () => {
 
   try {
     generateOptimizedPassword();
+
+    // 作成処理が正常に終了したらGA4に送信
+    if (typeof gtag === "function") {
+      gtag("event", "generate_password");
+    }
   } catch (error) {
     console.error("作成に失敗しました:", error);
   } finally {
